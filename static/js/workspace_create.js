@@ -15,10 +15,17 @@ const setBranches = (reposWithBranches, repoURL) => {
   })
 };
 
+const setName = (substring) => {
+  $("")
+  console.log(substring);
+};
+
 $(document).ready(() => {
   const reposWithBranches = JSON.parse(document.getElementById('reposWithBranches').textContent);
 
   $("#id_repo").change((event) => setBranches(reposWithBranches, event.target.value));
+
+  $("#id_repo, #id_branch, #id_db").change((event) => setName(event.target.value))
 
   setBranches(reposWithBranches, $("#id_repo").val());
 });
