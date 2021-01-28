@@ -98,4 +98,4 @@ class WorkspaceCreateForm(forms.ModelForm):
 
 
 class WorkspaceNotificationsToggleForm(forms.Form):
-    will_notify = forms.BooleanField(required=False)
+    should_notify = forms.BooleanField(required=False)
